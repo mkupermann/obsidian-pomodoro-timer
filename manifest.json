@@ -1,0 +1,9 @@
+{
+  "id": "pomodoro-timer",
+  "name": "Pomodoro Timer",
+  "version": "1.0.0",
+  "minAppVersion": "0.15.0",
+  "description": "Simple Pomodoro timer with visual countdown, notifications, and session tracking",
+  "author": "Michael Kupermann",
+  "isDesktopOnly": false
+}

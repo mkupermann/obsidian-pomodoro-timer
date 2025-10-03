@@ -1,0 +1,133 @@
+/* Pomodoro Timer Plugin - Floating Widget */
+
+/* Ribbon icon animation */
+.pomodoro-running {
+    animation: pomodoro-pulse 2s ease-in-out infinite;
+}
+
+@keyframes pomodoro-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+/* Floating Widget */
+.pomodoro-widget {
+    position: fixed;
+    z-index: 1000;
+    background: var(--background-primary);
+    border: 2px solid var(--interactive-accent);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    width: 220px;
+    user-select: none;
+}
+
+.pomodoro-content {
+    padding: 12px;
+}
+
+/* Header (draggable area) */
+.pomodoro-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: var(--background-secondary);
+    border-radius: 10px 10px 0 0;
+    margin: -12px -12px 8px -12px;
+    cursor: move;
+}
+
+.pomodoro-title {
+    font-size: 20px;
+    margin: 0;
+}
+
+.pomodoro-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    color: var(--text-muted);
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.pomodoro-close:hover {
+    background: var(--background-modifier-error);
+    color: var(--text-error);
+}
+
+/* Session counter */
+.pomodoro-session {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Timer Display */
+.pomodoro-timer {
+    font-size: 40px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    margin: 12px 0;
+    color: var(--interactive-accent);
+    font-family: var(--font-monospace);
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+/* Controls */
+.pomodoro-controls {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.pomodoro-btn {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid var(--background-modifier-border);
+    background: var(--background-secondary);
+    color: var(--text-normal);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pomodoro-btn:hover:not(:disabled) {
+    background: var(--interactive-accent);
+    color: white;
+    transform: scale(1.1);
+}
+
+.pomodoro-btn:disabled {
+    cursor: not-allowed;
+}
+
+/* Settings */
+.pomodoro-settings h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: var(--text-muted);
+    font-size: 1em;
+    font-weight: 600;
+    border-bottom: 1px solid var(--background-modifier-border);
+    padding-bottom: 8px;
+}
